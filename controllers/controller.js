@@ -14,7 +14,14 @@ exports.post = (request, response) => {
 };
 exports.put = (request, response) => {
   try {
-    console.log('controller POST')
+    console.log('controller PUT')
+  } catch (error) {
+    console.log('error')
+  }
+};
+exports.delete = (request, response) => {
+  try {
+    console.log('controller DELETE')
   } catch (error) {
     console.log('error')
   }
