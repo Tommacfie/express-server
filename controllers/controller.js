@@ -5,4 +5,11 @@ exports.get = (request, response) => {
     console.log('error')
   }
 };
+exports.post = (request, response) => {
+  try {
+    console.log('controller POST')
+  } catch (error) {
+    console.log('error')
+  }
+};
 
