@@ -1,3 +1,6 @@
+const Topic = require('../models/topic.model');
+const User = require('../models/user.model');
+
 exports.get = async (request, response) => {
   try {
     console.log('controller GET')
