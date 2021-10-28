@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
-const dotenv = require('dotenv').config();
+const { DATABASE_URL } = require('../config');
 
-const URL = process.env.DATABASE_URL;
-console.log(URL);
-
-mongoose.connect(URL, (error) => {
+mongoose.connect(DATABASE_URL, (error) => {
   if (error) console.log('Error connecting to database server');
-  console.log(`Mongodb server running on ${URL}`);
+  console.log(`Mongodb server running on ${DATABASE_URL}`);
 })
 
 module.exports = mongoose;
