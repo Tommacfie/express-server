@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 const { DATABASE_URL } = require('../config');
 
-mongoose.connect(DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-},
+mongoose.connect(DATABASE_URL,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  },
   (error) => {
-    if (error) console.log('Error connecting to database server');
-    console.log(`Mongodb server running on ${DATABASE_URL}`);
+    if (error) console.log(error);
+    console.log(`Connected to MongoDb server`);
   })
 
 module.exports = mongoose;
