@@ -7,8 +7,8 @@ mongoose.connect(DATABASE_URL,
     useUnifiedTopology: true
   },
   (error) => {
-    if (error) console.log(error);
-    console.log(`Connected to MongoDb server`);
+    if (error) console.log('error');
+    console.log(`Connected to MongoDb database`);
   })
 
 module.exports = mongoose;
